@@ -1,0 +1,10 @@
+void ChaosPack(DWORD gObjID);
+void LifePack(DWORD gObjID);
+void CreationPack(DWORD gObjID);
+void GuardionPack(DWORD gObjID);
+void HarmonyPack(DWORD gObjID);
+void ChaosUnPack(DWORD gObjID);
+void LifeUnPack(DWORD gObjID);
+void CreationUnPack(DWORD gObjID);
+void GuardionUnPack(DWORD gObjID);
+void HarmonyUnPack(DWORD gObjID);

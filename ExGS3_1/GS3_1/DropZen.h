@@ -1,0 +1,1 @@
+int DropZen(BYTE *b_MonsterDataAddr,BYTE *a_gObjAddr);

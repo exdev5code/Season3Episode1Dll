@@ -1,0 +1,1 @@
+//void ExBattleRingProcess (int aIndex);

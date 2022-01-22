@@ -1,0 +1,1 @@
+void NPCTeleportStart (int aIndex,int aNPC);

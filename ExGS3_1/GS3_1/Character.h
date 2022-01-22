@@ -1,0 +1,1 @@
+void MyCharacter (int aIndex);

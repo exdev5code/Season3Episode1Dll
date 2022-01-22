@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LocalDebuggerCommand>E:\ExTeam\Season3Episode1\[ExTeam] Server Season 3 Episode 1\GameServer\GameServer.exe</LocalDebuggerCommand>
+    <LocalDebuggerCommandArguments>127.0.0.1 55970 127.0.0.1 55960 55901</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>E:\ExTeam\Season3Episode1\[ExTeam] Server Season 3 Episode 1\GameServer</LocalDebuggerWorkingDirectory>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LocalDebuggerCommand>D:\ExTeam\Season3Episode1\Server\GameServer\GameServer.exe</LocalDebuggerCommand>
+    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
+    <LocalDebuggerCommandArguments>127.0.0.1 55970 127.0.0.1 55960 55901</LocalDebuggerCommandArguments>
+    <LocalDebuggerWorkingDirectory>..\..\..\Server\GameServer</LocalDebuggerWorkingDirectory>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,122 @@
+#include "stdafx.h"
+#include "Price.h"
+#include "utils.h"
+//=======================================================================================================================
+// Item Price 
+//=======================================================================================================================
+__inline __declspec(naked) void ItemPrice()
+{   
+    _asm
+    {
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,89) // Bronze Coin
+JNE Item1 
+MOV DWORD PTR SS:[EBP-0x8],0x5F5E100 // 100 000 000
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item1:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,90) // Silver Coin
+JNE Item2
+MOV DWORD PTR SS:[EBP-0x8],0xEE6B280 // 250 000 000
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item2:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,91) // Golden Coin
+JNE Item3
+MOV DWORD PTR SS:[EBP-0x8],0x1DCD6500 // 500 000 000
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item3:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,92) // Platina Coin
+JNE Item4
+MOV DWORD PTR SS:[EBP-0x8],0x3B9ACA00 // 1 000 000 000
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item4:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,102) 
+JNE Item5
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item5:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,103) 
+JNE Item6
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item6:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,103) 
+JNE Item7
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item7:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,104) 
+JNE Item8
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item8:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,105) 
+JNE Item9
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item9:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,106) 
+JNE Item10
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Item10:
+MOV EDX,DWORD PTR SS:[EBP+0x8]
+MOVSX EAX,WORD PTR DS:[EDX]
+CMP EAX,ITEM(14,107) 
+JNE Next
+MOV DWORD PTR SS:[EBP-0x8],0x2FAF080 
+MOV DWORD PTR SS:[EBP-0x4],0x0
+JMP Exit
+
+Next:
+ mov esi,0x00599AF2
+ jmp esi
+
+Exit:
+ mov esi,0x0059A4E5
+ jmp esi
+ }
+}
+void PriceLoad()
+{
+	SetNop(0x00599AD2,32);
+	HookOffset((DWORD)&ItemPrice, 0x00599AD2, 0xE9); 
+}

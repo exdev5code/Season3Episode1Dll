@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EA70F4A3-2D56-44A7-B601-173876689EDB}</ProjectGuid>
+    <RootNamespace>GS3_1</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>ExGame</TargetName>
+    <OutDir>E:\ExTeam\Season3Episode1\[ExTeam] Server Season 3 Episode 1\GameServer\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\..\..\Server\GameServer</OutDir>
+    <TargetName>ExGame</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>E:\ExTeam\Season3Episode1\[ExTeam] Server Season 3 Episode 1\GameServer\ExGame.dll</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AddFunctions.h" />
+    <ClInclude Include="AntiCheatPlus.h" />
+    <ClInclude Include="BMQuest.h" />
+    <ClInclude Include="Buffer.h" />
+    <ClInclude Include="ChaosMix.h" />
+    <ClInclude Include="Character.h" />
+    <ClInclude Include="CoinZen.h" />
+    <ClInclude Include="Commands.h" />
+    <ClInclude Include="CQuery.h" />
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="DropEvent.h" />
+    <ClInclude Include="DropZen.h" />
+    <ClInclude Include="Exchanger.h" />
+    <ClInclude Include="ExCore.h" />
+    <ClInclude Include="Experience.h" />
+    <ClInclude Include="Fix.h" />
+    <ClInclude Include="Functions.h" />
+    <ClInclude Include="GMSystem.h" />
+    <ClInclude Include="HappyHour.h" />
+    <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemDropManager.h" />
+    <ClInclude Include="Jewels.h" />
+    <ClInclude Include="LogToFile.h" />
+    <ClInclude Include="LoraBattle.h" />
+    <ClInclude Include="MagicInf.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Message.h" />
+    <ClInclude Include="MixList.h" />
+    <ClInclude Include="NewOptions.h" />
+    <ClInclude Include="NPCTeleport.h" />
+    <ClInclude Include="OffExp.h" />
+    <ClInclude Include="Offtrade.h" />
+    <ClInclude Include="PackSystem.h" />
+    <ClInclude Include="Process.h" />
+    <ClInclude Include="Protocol.h" />
+    <ClInclude Include="PvPSystem.h" />
+    <ClInclude Include="Quest_PGW.h" />
+    <ClInclude Include="Rang.h" />
+    <ClInclude Include="ReadScript_ex.h" />
+    <ClInclude Include="Reset.h" />
+    <ClInclude Include="SearchEvent.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SystemBrother.h" />
+    <ClInclude Include="USER.h" />
+    <ClInclude Include="Utilits.h" />
+    <ClInclude Include="VipSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AddFunctions.cpp" />
+    <ClCompile Include="AntiCheatPlus.cpp" />
+    <ClCompile Include="BMQuest.cpp" />
+    <ClCompile Include="Buffer.cpp" />
+    <ClCompile Include="ChaosMix.cpp" />
+    <ClCompile Include="Character.cpp" />
+    <ClCompile Include="CoinZen.cpp" />
+    <ClCompile Include="Commands.cpp" />
+    <ClCompile Include="CQuery.cpp" />
+    <ClCompile Include="DropEvent.cpp" />
+    <ClCompile Include="DropZen.cpp" />
+    <ClCompile Include="Exchanger.cpp" />
+    <ClCompile Include="ExCore.cpp" />
+    <ClCompile Include="Experience.cpp" />
+    <ClCompile Include="Fix.cpp" />
+    <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="GMSystem.cpp" />
+    <ClCompile Include="HappyHour.cpp" />
+    <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemDropManager.cpp" />
+    <ClCompile Include="Jewels.cpp" />
+    <ClCompile Include="LogToFile.cpp" />
+    <ClCompile Include="LoraBattle.cpp" />
+    <ClCompile Include="MagicInf.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Message.cpp" />
+    <ClCompile Include="MixList.cpp" />
+    <ClCompile Include="NewOptions.cpp" />
+    <ClCompile Include="NPCTeleport.cpp" />
+    <ClCompile Include="OffExp.cpp" />
+    <ClCompile Include="Offtrade.cpp" />
+    <ClCompile Include="PackSystem.cpp" />
+    <ClCompile Include="Process.cpp" />
+    <ClCompile Include="Protocol.cpp" />
+    <ClCompile Include="PvPSystem.cpp" />
+    <ClCompile Include="Quest_PGW.cpp" />
+    <ClCompile Include="Rang.cpp" />
+    <ClCompile Include="Reset.cpp" />
+    <ClCompile Include="SearchEvent.cpp" />
+    <ClCompile Include="SystemBrother.cpp" />
+    <ClCompile Include="Utilits.cpp" />
+    <ClCompile Include="VipSystem.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
